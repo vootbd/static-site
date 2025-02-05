@@ -3,7 +3,7 @@ resource "aws_instance" "ubuntu_instance" {
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.public_subnet.id
   vpc_security_group_ids      = [aws_security_group.security_group.id]
-  key_name                    = host
+  key_name                    = "host"
   associate_public_ip_address = true
 
   depends_on = [
