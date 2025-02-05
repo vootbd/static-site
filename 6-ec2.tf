@@ -19,8 +19,8 @@ resource "aws_instance" "ubuntu_instance" {
               # Create index.html with H1 tag in the default NGINX web directory
               echo "<h1>Hello From Ubuntu EC2 Instance!!!</h1>" | sudo tee /var/www/html/index.html
 
-              # Update NGINX to listen on port 8080
-              sudo sed -i 's/listen 80 default_server;/listen 8080 default_server;/g' /etc/nginx/sites-available/default
+              # Update NGINX to listen on port 80
+              sudo sed -i 's/listen 80 default_server;/listen 80 default_server;/g' /etc/nginx/sites-available/default
 
               # Restart NGINX to apply the changes
               sudo systemctl restart nginx
