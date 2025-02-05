@@ -1,4 +1,4 @@
-# create security group for the Jenkins instance
+# create security group for the instance
 resource "aws_security_group" "security_group" {
   name        = "default security group"
   description = "To allow access on ports"
